@@ -25,6 +25,7 @@ class ArticlesController < ApplicationController
   def edit
     @article = Article.find(params[:id])
   end
+  
   def update
     @article = Article.find(params[:id])
     if @article.update(article_params)
@@ -33,6 +34,14 @@ class ArticlesController < ApplicationController
     else
       flash[:error]="Article has not been updated"
       render :edit
+    end
+  end
+  
+  def destroy
+    @article = Article.find(params[:id])
+    if @article.destroy
+      flash[:success]="Article has been Deleted"
+      redirect_to articles_path
     end
   end
   
