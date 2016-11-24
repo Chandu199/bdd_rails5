@@ -253,7 +253,7 @@ DEPENDENCIES
   byebug
   capybara (= 2.7.1)
   coffee-rails (~> 4.2)
-  devise
+  devise (~> 4.2.0)
   guard (~> 2.14.0)
   guard-cucumber (~> 2.1.2)
   guard-rspec (~> 4.7.2)
